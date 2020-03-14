@@ -1,0 +1,1 @@
+- [抽象によるソフトウェア設計](https://books.google.co.jp/books?id=yAv3dJotgpUC&printsec=frontcover&hl=ja#v=onepage&q&f=true)
