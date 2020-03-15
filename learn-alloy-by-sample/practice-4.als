@@ -34,8 +34,9 @@ fact {
 }
 
 fact {
-	-- Day-last も util/ordering[Day] により可能に。でも last が必要な理由がわからない
-	all d: Day-last | d.メイン担当者 not in (d.next.メイン担当者 + d.next.サブ担当者)
+	-- last も util/ordering[Day] により使用可能に
+	-- ここでの formula は「ある日メイン担当者となったら翌日は何も担当しないこと」なので、翌日の存在しない最終日を除外するため Day - last としている
+	all d: Day - last | d.メイン担当者 not in (d.next.メイン担当者 + d.next.サブ担当者)
 }
 
 pred show{}
