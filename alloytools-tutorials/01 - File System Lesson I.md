@@ -33,10 +33,15 @@ fact {
 }
 ```
 ```alloy
+// pattern 2
 abstract sig FSObject {}
+sig Dir extends FSObject { contents: set FSObject }
+sig File extends FSObject { }
 ```
 `+` は和集合を示すので、pattern 1 の fact は「すべてのFileとすべてのDirの結合は、すべてのFSObjectの集合と同じ」という事を示す.
+`abstract` については下記の補遺を参照のこと。
 
+ --
 
 いわゆるディレクトリのルートは次のように表せる。2つ目の`{ }`は appended facts(後述.ただ呼び名の通り fact の追加)
 ```alloy
