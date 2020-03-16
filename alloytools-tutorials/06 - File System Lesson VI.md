@@ -36,3 +36,4 @@ pred remove [fs, fs': FileSystem, x: FSObject] {
 
 このわかりにくい反例は、FileSystem の root や live の周りの記述を洗練しすぎたが故のような気がしないでもない。
 あえてモデルを元に戻す事で直ったりしないのか？試してみる。
+→ File System Model III にする程度では意味がない。結局 `live = root.*contents` としているからかな・・？
